@@ -2,7 +2,7 @@ require('./check-versions')()
 
 process.env.NODE_ENV = 'production'
 
-var ora = require('ora')
+var ora = require('ora') // 优雅的终端旋转器（加载符号）
 var rm = require('rimraf')
 var path = require('path')
 var chalk = require('chalk')
@@ -15,7 +15,7 @@ spinner.start()
 
 rm(path.join(config.build.assetsRoot, config.build.assetsSubDirectory), err => {
   if (err) throw err
-  webpack(webpackConfig, function (err, stats) {
+  webpack(webpackConfig, function(err, stats) { // webpack编译打包
     spinner.stop()
     if (err) throw err
     process.stdout.write(stats.toString({

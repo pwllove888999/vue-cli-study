@@ -4,7 +4,7 @@ var path = require('path')
 module.exports = {
   build: {
     env: require('./prod.env'),
-    index: path.resolve(__dirname, '../dist/index.html'),
+    index: path.resolve(__dirname, '../dist/index.html'), // __dirname 访问一个绝对路径，最终指向当前文件所在的目录
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
     assetsPublicPath: './', // 访问的相对index.html所在的目录，而不是相对网站根目录www by pengwei
