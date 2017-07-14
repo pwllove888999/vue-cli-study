@@ -8,7 +8,8 @@ import Api from './api'
 Vue.prototype.$api = Api
 
 Vue.config.productionTip = false
-
+import infiniteScroll from 'vue-infinite-scroll'
+Vue.use(infiniteScroll)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
